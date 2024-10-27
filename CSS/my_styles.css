@@ -1,0 +1,75 @@
+/*
+
+
+
+*/
+
+
+body {
+    background: linear-gradient(white, whitesmoke, antiquewhite); /*sets the nice face of colors on background*/
+    height: 100vh; /* Set body height to the full viewport */
+}
+
+
+form {
+    display: block;
+}
+
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+
+table {
+    border-collapse: collapse; /* merges table borders into a single border */
+    margin: 20px auto;
+    width: 50%;
+}
+
+
+th, td {
+    border: 2px solid blue;
+    padding: 8px;
+    text-align: center;
+}
+
+
+th {
+    position: sticky;
+    top: 0; /* for top header */
+    background: white; /* optional: to avoid overlap with other content */
+}
+
+
+/* For the first column */
+td:first-child, th:first-child {
+    position: sticky;
+    left: 0; /* for first column */
+    background: white;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+
+tr:nth-child(odd) {
+    background-color: white; /* White for odd rows */
+}
+
+
+
+
+/* sets multiplication table dimensions */
+#tableContainer {
+    width: 1000px;          /* Set a fixed width for the container */
+    height: 400px;         /* Set a fixed height for the container */
+    overflow: auto;        /* Add scrollbars when content overflows */
+}
+
+
+
+
