@@ -57,6 +57,7 @@ document.getElementById("dataForm").addEventListener("submit", function (event) 
             document.getElementById(errorId).textContent = "Must be between -50 and 50.";
             return false; // Invalid
         }
+        
         return true; // Valid
     };
     
@@ -65,6 +66,8 @@ document.getElementById("dataForm").addEventListener("submit", function (event) 
     valid &= validateInput(colmNumEnd, 'errorColmNumEnd');
     valid &= validateInput(minRowValue, 'errorMinRowValue');
     valid &= validateInput(maxRowValue, 'errorMaxRowValue');
+    
+    
     // *************************************************************** End of Lambda function
     
     // log the values and generate the table if all checks pass
