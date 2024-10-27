@@ -1,5 +1,5 @@
 /*
-
+https://mkdirnumber1.github.io/GUI-A3/
 
 
 */
@@ -52,12 +52,12 @@ td:first-child, th:first-child {
 
 
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray for even rows */
+    background-color: skyblue; /* Light gray for even rows */
 }
 
 
 tr:nth-child(odd) {
-    background-color: white; /* White for odd rows */
+    background-color: pink; /* White for odd rows */
 }
 
 
