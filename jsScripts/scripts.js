@@ -1,13 +1,9 @@
 /**
  * Author: [Evan Kuczynski]
- * Date Completed: [10/26]
- * Description: []
- *
- * @module [scripts.js]      
- * @function [Function Name]                // Optional: Specify function if applicable
- * @param {type} paramName - Description     // Optional: List parameters if it's a function
- * @returns {type} Description               // Optional: Describe the return value if applicable
- * @throws {type} Description                // Optional: Describe any potential errors thrown
+ * Date Completed: [10/27]
+ * Time spent: 8 hrs
+ * Description: [File contains 2 functions: one for when the submit button is clicked
+ *              and another to generate the dynamic multiplication table]
  *
  * Additional notes: []
  */

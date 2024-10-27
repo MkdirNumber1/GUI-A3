@@ -1,7 +1,7 @@
 /*
-@copyright Evan Kuczynski
-https://mkdirnumber1.github.io/GUI-A3/
+@copyright Evan Kuczynski 2024
 
+https://mkdirnumber1.github.io/GUI-A3/
 */
 
 
@@ -27,6 +27,15 @@ table {
     margin-left: 100px;
     margin-top: 80px;
     width: 70%;
+}
+label {
+    margin-right: 20px; /* Space between label and input */
+}
+
+
+/* Darker on hover */
+button:hover {
+    background-color: wheat;
 }
 
 
@@ -75,6 +84,7 @@ tr:nth-child(odd) {
     overflow: auto;        /* Add scrollbars when content overflows */
 }
 
+/* make nice footer */
 footer {
     text-align: center;
     margin-top: 200px;
