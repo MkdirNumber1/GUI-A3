@@ -75,4 +75,7 @@ tr:nth-child(odd) {
     overflow: auto;        /* Add scrollbars when content overflows */
 }
 
-
+footer {
+    text-align: center;
+    margin-top: 200px;
+}
