@@ -1,6 +1,6 @@
 /*
+@copyright Evan Kuczynski
 https://mkdirnumber1.github.io/GUI-A3/
-
 
 */
 
@@ -11,9 +11,6 @@ body {
     height: 100vh; /* Set body height to the full viewport */
 }
 
-h1 {
-    align-self: center;
-}
 
 /* container for form and table */
 .container {
@@ -27,8 +24,9 @@ h1 {
 /* sets the boarder, margins and width for the multiplication table */
 table {
     border-collapse: collapse; /* merges table borders into a single border */
-    margin: 20px auto;
-    width: 50%;
+    margin-left: 100px;
+    margin-top: 80px;
+    width: 70%;
 }
 
 
@@ -73,7 +71,7 @@ tr:nth-child(odd) {
 /* sets multiplication table dimensions */
 #tableContainer {
     width: 1000px;          /* Set a fixed width for the container */
-    height: 400px;         /* Set a fixed height for the container */
+    height: 600px;         /* Set a fixed height for the container */
     overflow: auto;        /* Add scrollbars when content overflows */
 }
 
