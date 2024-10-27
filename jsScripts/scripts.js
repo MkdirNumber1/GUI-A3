@@ -124,7 +124,7 @@ function generateTable(colmNumStart, colmNumEnd, minRowValue, maxRowValue) {
     const headerCell1 = document.createElement("th");
     
     
-    // headerCell1.textContent = "Row/Column"; // Give the table header a name
+    headerCell1.textContent = "R|C"; // Give the table header a name
 
 
     // Append the header cell to the header row
