@@ -21,6 +21,11 @@ document.getElementById("dataForm").addEventListener("submit", function (event) 
     
     // prevents the norm behavior of the form
     event.preventDefault();
+
+
+    // clear the table container if any
+    const tableContainer = document.getElementById("tableContainer");
+    tableContainer.innerHTML = ''; // Clear the previous table if any
     
     
     // retrieve input values and parse them as ints from strings
@@ -44,30 +49,42 @@ document.getElementById("dataForm").addEventListener("submit", function (event) 
     document.getElementById('errorMaxRowValue').textContent = '';
 
     // **************************************************************  Lambda function section
-    // assign variable of bool to true
-    let valid = true;
-    
     // check if entered inputs are within the allowable range 
     // set flag to false if inputs are not within valid range
     // LAMBDA EXPRESSION FOR FUN
     // excepts value and id as parameters then checks if value is in the bounds if not return false
     // if input meets bounds return true
     const validateInput = (value, errorId) => {
+        if (isNaN(value)) {
+            document.getElementById(errorId).textContent = "Must be a valid number.";
+            return false;
+        }
         if (value < -50 || value > 50) {
             document.getElementById(errorId).textContent = "Must be between -50 and 50.";
-            return false; // Invalid
+            return false;
         }
-        
-        return true; // Valid
+        return true;
     };
-    
-    // call lambda function
-    valid &= validateInput(colmNumStart, 'errorColmNumStart');
-    valid &= validateInput(colmNumEnd, 'errorColmNumEnd');
-    valid &= validateInput(minRowValue, 'errorMinRowValue');
-    valid &= validateInput(maxRowValue, 'errorMaxRowValue');
-    
-    
+
+    const inputs = [
+        { value: colmNumStart, errorId: 'errorColmNumStart' },
+        { value: colmNumEnd, errorId: 'errorColmNumEnd' },
+        { value: minRowValue, errorId: 'errorMinRowValue' },
+        { value: maxRowValue, errorId: 'errorMaxRowValue' },
+    ];
+
+    let valid = inputs.every(({ value, errorId }) => validateInput(value, errorId));
+
+    // check if the end values are smaller than the starting values
+    // ex. colm start is 20 but column end is 10 won't work
+    if (colmNumStart >= colmNumEnd) {
+        document.getElementById('errorColmNumStart').textContent = "Column end must be greater than column start.";
+        valid = false;
+    }
+    if (minRowValue >= maxRowValue) {
+        document.getElementById('errorMinRowValue').textContent = "Row end must be greater than row start.";
+        valid = false;
+    }
     // *************************************************************** End of Lambda function
     
     // log the values and generate the table if all checks pass
