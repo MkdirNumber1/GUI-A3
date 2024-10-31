@@ -21,6 +21,14 @@ body {
 }
 
 
+/* style the form */
+#dataForm {
+    display: flex;              /* Use flexbox for the form */
+    flex-direction: column;     /* Stack items vertically */
+    align-items: flex-start;   /* Align items to the start */
+}
+
+
 /* sets the boarder, margins and width for the multiplication table */
 table {
     border-collapse: collapse; /* merges table borders into a single border */
