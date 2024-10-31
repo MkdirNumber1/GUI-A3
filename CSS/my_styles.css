@@ -36,8 +36,10 @@ table {
     margin-top: 80px;
     width: 70%;
 }
+
+
 label {
-    margin-right: 20px; /* Space between label and input */
+    padding-bottom: 5px;
 }
 
 
