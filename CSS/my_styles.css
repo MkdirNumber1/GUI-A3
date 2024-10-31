@@ -92,6 +92,8 @@ tr:nth-child(odd) {
     width: 1000px;          /* Set a fixed width for the container */
     height: 600px;         /* Set a fixed height for the container */
     overflow: auto;        /* Add scrollbars when content overflows */
+    margin: 40px;
+
 }
 
 /* make nice footer */
